@@ -1,5 +1,5 @@
 %define LANG ja
-%define snap 20070515
+%define snap 20070615
 
 Summary:	Japanese manual pages
 Name:		man-pages-%LANG
@@ -11,7 +11,9 @@ URL:		http://www.linux.or.jp/JM/download.html
 Source0:	http://www.linux.or.jp/JM/%{name}-%{snap}.tar.bz2
 Source2:	http://xjman.dsl.gr.jp/xjman-0.7.tar.bz2
 Source3:	man-pages-ja-install.sh
+Source4:	manpage-utf8-converter.rb
 BuildRequires:	man 	>= 1.6e
+BuildRequires:	ruby
 Requires:	locales-%LANG
 Requires:	man	>= 1.6e
 # for file-system:
@@ -36,6 +38,12 @@ echo "xjman-4.1.0	Y" >> script/pkgs.list
 %build
 cp %SOURCE3 installman.sh
 rm -f manual/*/man1/man.1 manual/*/man1/apropos.1 manual/*/man1/whatis.1
+
+# convert manpages (euc-jp to utf-8)
+# we can use konqueror as a manpage viewer,
+# but konqueror doesn't detect euc-jp properly.
+cp %SOURCE4 .
+./manpage-utf8-converter.rb
 
 %install
 rm -rf %{buildroot}

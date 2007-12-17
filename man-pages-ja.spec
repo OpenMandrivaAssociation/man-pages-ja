@@ -23,7 +23,6 @@ Autoreqprov:	false
 BuildArch:	noarch
 Obsoletes:	man-%LANG, manpages-%LANG
 Provides:	man-%LANG, manpages-%LANG
-Buildroot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 The japanese man pages.

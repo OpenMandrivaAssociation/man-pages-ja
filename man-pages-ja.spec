@@ -1,5 +1,5 @@
 %define LANG ja
-%define snap 20070615
+%define snap 20080515
 
 Summary:	Japanese manual pages
 Name:		man-pages-%LANG
@@ -8,7 +8,7 @@ Release:	%mkrel 1
 License:	distributable
 Group:		System/Internationalization
 URL:		http://www.linux.or.jp/JM/download.html
-Source0:	http://www.linux.or.jp/JM/%{name}-%{snap}.tar.bz2
+Source0:	http://www.linux.or.jp/JM/%{name}-%{snap}.tar.gz
 Source2:	http://xjman.dsl.gr.jp/xjman-0.7.tar.bz2
 Source3:	man-pages-ja-install.sh
 Source4:	manpage-utf8-converter.rb

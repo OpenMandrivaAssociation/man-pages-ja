@@ -1,10 +1,10 @@
 %define LANG ja
-%define snap 20080515
+%define snap 20080915
 
 Summary:	Japanese manual pages
 Name:		man-pages-%LANG
 Version:	%{snap}
-Release:	%mkrel 2
+Release:	%mkrel 1
 License:	distributable
 Group:		System/Internationalization
 URL:		http://www.linux.or.jp/JM/download.html

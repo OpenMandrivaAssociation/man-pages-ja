@@ -1,5 +1,5 @@
 %define LANG ja
-%define snap 20081115
+%define snap 20090315
 
 Summary:	Japanese manual pages
 Name:		man-pages-%LANG

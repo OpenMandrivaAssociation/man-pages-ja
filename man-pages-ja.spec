@@ -4,7 +4,7 @@
 Summary:	Japanese manual pages
 Name:		man-pages-%LANG
 Version:	%{snap}
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	distributable
 Group:		System/Internationalization
 URL:		http://www.linux.or.jp/JM/download.html

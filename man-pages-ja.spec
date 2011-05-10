@@ -93,7 +93,7 @@ rm -fr %{buildroot}
 %doc ChangeLog README
 %dir %{_mandir}/%LANG
 %dir /var/cache/man/%LANG
-%config(noreplace) /var/cache/man/%LANG/whatis
 %{_mandir}/%LANG/man*
+%config(noreplace) %{_mandir}/%LANG/whatis
 %attr(755,root,man)/var/catman/%LANG
 %config(noreplace) %attr(755,root,root)/etc/cron.weekly/makewhatis-%LANG.cron

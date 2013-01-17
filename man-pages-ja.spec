@@ -54,12 +54,12 @@ make install
 
 rm -fr 
 
-LANG=%LANG DESTDIR=%{buildroot} /usr/sbin/makewhatis %{buildroot}%{_mandir}/%LANG
+LANG=%LANG DESTDIR=%{buildroot} %{_bindir}/mandb %{buildroot}%{_mandir}/%LANG
 
 mkdir -p %{buildroot}/etc/cron.weekly
 cat > %{buildroot}/etc/cron.weekly/makewhatis-%LANG.cron << EOF
 #!/bin/bash
-/usr/sbin/makewhatis %{_mandir}/%LANG
+%{_bindir}/mandb %{_mandir}/%LANG
 exit 0
 EOF
 chmod a+x %{buildroot}/etc/cron.weekly/makewhatis-%LANG.cron

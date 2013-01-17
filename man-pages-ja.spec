@@ -94,7 +94,10 @@ rm -fr %{buildroot}
 %dir %{_mandir}/%LANG
 %dir /var/cache/man/%LANG
 %{_mandir}/%LANG/man*
-%config(noreplace) %{_mandir}/%LANG/whatis
+%{_mandir}/%{LNG}/cat*
+%{_mandir}/%{LNG}/CACHEDIR.TAG*
+%{_mandir}/%{LNG}/index.db*
+#%config(noreplace) %{_mandir}/%LANG/whatis
 %attr(755,root,man)/var/catman/%LANG
 %config(noreplace) %attr(755,root,root)/etc/cron.weekly/makewhatis-%LANG.cron
 

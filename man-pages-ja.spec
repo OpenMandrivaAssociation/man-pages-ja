@@ -4,7 +4,7 @@
 Summary:	Japanese manual pages
 Name:		man-pages-%LANG
 Version:	%{snap}
-Release:	%mkrel 5
+Release:	6
 License:	distributable
 Group:		System/Internationalization
 URL:		http://www.linux.or.jp/JM/download.html
@@ -23,7 +23,6 @@ Autoreqprov:	false
 BuildArch:	noarch
 Obsoletes:	man-%LANG, manpages-%LANG
 Provides:	man-%LANG, manpages-%LANG
-Buildroot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 The japanese man pages.
@@ -43,6 +42,7 @@ rm -f manual/*/man1/man.1 manual/*/man1/apropos.1 manual/*/man1/whatis.1
 # we can use konqueror as a manpage viewer,
 # but konqueror doesn't detect euc-jp properly.
 cp %SOURCE4 .
+chmod a+x manpage-utf8-converter.rb
 ./manpage-utf8-converter.rb
 
 %install

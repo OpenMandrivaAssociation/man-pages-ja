@@ -4,7 +4,7 @@
 Summary:	Japanese manual pages
 Name:		man-pages-%{LNG}
 Version:	%{snap}
-Release:	6
+Release:	7
 License:	distributable
 Group:		System/Internationalization
 Url:		http://www.linux.or.jp/JM/download.html
@@ -19,7 +19,7 @@ Requires:	locales-%{LNG}
 Requires:	man
 # for file-system:
 Requires(pre):	man
-Requires(post): man
+Requires(post):	man
 Autoreqprov:	false
 
 %description
@@ -61,6 +61,8 @@ chmod a+x %{buildroot}/etc/cron.weekly/makewhatis-%{LNG}.cron
 
 mkdir -p  %{buildroot}/var/cache/man/%{LNG}
 rm -f %{buildroot}/usr/share/man/README*
+
+rm -rf %{buildroot}%{_mandir}/ja/man1/passwd.1*
 
 %postun
 # 0 means deleting the package

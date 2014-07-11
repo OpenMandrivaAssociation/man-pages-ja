@@ -4,7 +4,7 @@
 Summary:	Japanese manual pages
 Name:		man-pages-%{LNG}
 Version:	%{snap}
-Release:	12
+Release:	13
 License:	distributable
 Group:		System/Internationalization
 Url:		http://www.linux.or.jp/JM/download.html

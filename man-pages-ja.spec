@@ -4,7 +4,7 @@
 Summary:	Japanese manual pages
 Name:		man-pages-%{LNG}
 Version:	%{snap}
-Release:	16
+Release:	17
 License:	distributable
 Group:		System/Internationalization
 Url:		http://www.linux.or.jp/JM/download.html
@@ -21,6 +21,7 @@ Requires:	man
 Requires(pre):	man
 Requires(post):	man
 Autoreqprov:	false
+Conflicts:	filesystem < 3.0-17
 
 %description
 The japanese man pages.
@@ -83,11 +84,9 @@ fi
 
 %files
 %doc ChangeLog README
-%dir %{_mandir}/%{LNG}
 %dir /var/cache/man/%{LNG}
 %{_mandir}/%{LNG}/man*
 %{_mandir}/%{LNG}/cat*
-%{_mandir}/%{LNG}/CACHEDIR.TAG*
 %{_mandir}/%{LNG}/index.db*
 %attr(755,root,man)/var/catman/%{LNG}
 %config(noreplace) %attr(755,root,root)/etc/cron.weekly/makewhatis-%{LNG}.cron

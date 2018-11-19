@@ -15,6 +15,7 @@ Source4:	manpage-utf8-converter.rb
 BuildArch:	noarch
 BuildRequires:	man
 BuildRequires:	ruby
+BuildRequires:	ruby(rubygems)
 Requires:	locales-%{LNG}
 Requires:	man
 # for file-system:

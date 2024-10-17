@@ -7,7 +7,7 @@ Version:	%{snap}
 Release:	19
 License:	distributable
 Group:		System/Internationalization
-Url:		http://www.linux.or.jp/JM/download.html
+Url:		https://www.linux.or.jp/JM/download.html
 Source0:	http://www.linux.or.jp/JM/%{name}-%{snap}.tar.gz
 Source2:	http://xjman.dsl.gr.jp/xjman-0.7.tar.bz2
 Source3:	man-pages-ja-install.sh

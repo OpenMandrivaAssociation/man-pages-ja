@@ -13,6 +13,7 @@ Source2:	http://xjman.dsl.gr.jp/xjman-0.7.tar.bz2
 Source3:	man-pages-ja-install.sh
 Source4:	manpage-utf8-converter.rb
 BuildArch:	noarch
+BuildRequires:	make
 BuildRequires:	man
 BuildRequires:	ruby
 BuildRequires:	ruby(rubygems)
